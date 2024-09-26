@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
 :root {
   --color-bg1: rgb(8, 10, 15);
@@ -15,6 +15,7 @@
 
 
 * {
+  font-family: "Michroma", sans-serif;
   margin:0;
   padding:0;
   outline:none;
@@ -27,7 +28,7 @@
 }
 
 html, body {
-  font-family: 'Dongle', sans-serif;
+  
   margin: 0;
   padding: 0;
   height: 100%;
@@ -36,19 +37,16 @@ html, body {
 
 body {
   background: #FFF;
-  font-family: 'Montserrat', sans-serif;
   overflow: hidden;
 }
 
 h1, h2, h3 {
-  font-family: 'Monaco', monospace;
   font-weight: 700;
 }
 
 button {
     background-color: rgba(3, 3, 43, 0.8);
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     padding: 12px 24px;
     border-radius: 8px;
@@ -129,6 +127,18 @@ p {
   line-height: 1.6;
 }
 
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0.3;
+  }
+  to {
+      opacity: 1;
+  }
+}
 
 @keyframes moveInCircle {
   0% {
@@ -164,6 +174,19 @@ p {
   100% {
     transform: translateX(-50%) translateY(-10%);
   }
+}
+
+@keyframes zoomIn {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(3);
+  }
+}
+
+body.zoom-in {
+  animation: zoomIn 1s forwards;
 }
 
 
