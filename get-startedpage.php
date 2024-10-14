@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
-    <title>Get Started</title>
+    <link rel="stylesheet" href="css/get-startedpage.css">
+    <script src="js/get-startedpage.js"></script>
+    <title>Ec-Clean Water System Corp.</title>
 </head>
 
 <body class="fade-in">
@@ -19,8 +19,11 @@
             <rect width='100%' height='100%' preserveAspectRatio="xMidYMid meet" filter='url(#noiseFilter)' />
         </svg>
         <div class="content">
-            <h1>Ec-Clean Water Systems</h1>
-            <button onclick="zoomAndNavigate()">Get Started</button>
+            <div class="logo">
+                <img src="img/ec-clean-logo-alt.svg" alt="Logo" />
+            </div>
+            <h1 id="company-title">Ec-Clean Water Systems</h1>
+            <button onclick="fadeAndNavigate()">Get Started</button>
         </div>
     </div>
     <div class="gradient-bg">
@@ -51,22 +54,22 @@
     </div>
 
     <script>
-        function zoomAndNavigate() {
-            document.body.classList.add('zoom-in');
+        function fadeAndNavigate() {
+            document.body.classList.add('fade-out');
             setTimeout(() => {
                 window.location.href = 'landingpage.php';
             }, 1000);
         }
 
         window.onload = function() {
-        document.body.classList.remove('zoom-in');
-    };
+            document.body.classList.remove('fade-out');
+        };
 
-    window.addEventListener('pageshow', function(event) {
-        if (event.persisted) {
-            document.body.classList.remove('zoom-in');
-        }
-    });
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                document.body.classList.remove('fade-out');
+            }
+        });
     </script>
 </body>
 

@@ -17,6 +17,7 @@ body, html {
     align-items: center;
     height: 100vh;
     background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+    transition: all 1s ease-in-out; 
 }
 
 @keyframes flip {
@@ -30,6 +31,21 @@ body, html {
     }
     100% {
         transform: perspective(1000px) rotateY(-10deg);
+    }
+}
+
+.fade-out {
+    animation: fadeOutSmooth 1s ease-in-out forwards;
+}
+
+@keyframes fadeOutSmooth {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.9);
     }
 }
 

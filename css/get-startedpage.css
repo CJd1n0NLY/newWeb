@@ -41,7 +41,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 button {
@@ -118,25 +118,42 @@ button {
   }
 }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 16px;
-}
-
 p {
   line-height: 1.6;
 }
 
-.fade-in {
-  animation: fadeIn 1s ease-in;
+#company-title{
+  font-size: 2.5rem;
+  padding-bottom: 15px;
 }
 
-@keyframes fadeIn {
+.fade-in {
+  animation: fadeInSmooth 1.5s ease-in;
+}
+
+@keyframes fadeInSmooth {
   from {
-      opacity: 0.3;
+      opacity: 0;
+      transform: translateY(20px);
   }
   to {
       opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fade-out {
+  animation: fadeOutSmooth 1s ease-in-out forwards;
+}
+
+@keyframes fadeOutSmooth {
+  from {
+      opacity: 1;
+      transform: scale(1);
+  }
+  to {
+      opacity: 0;
+      transform: scale(0.9);
   }
 }
 
@@ -175,20 +192,6 @@ p {
     transform: translateX(-50%) translateY(-10%);
   }
 }
-
-@keyframes zoomIn {
-  0% {
-      transform: scale(1);
-  }
-  100% {
-      transform: scale(3);
-  }
-}
-
-body.zoom-in {
-  animation: zoomIn 1s forwards;
-}
-
 
 .gradient-bg {
   width: 100vw;

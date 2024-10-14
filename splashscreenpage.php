@@ -4,22 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/splashstyle.css">
-    <title>Splash Screen</title>
-    <style>
-        .fade-out {
-            animation: fadeOut 1s ease-in forwards;
-        }
-
-        @keyframes fadeOut {
-            from {
-                opacity: 1;
-            }
-            to {
-                opacity: 0.3;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/splashscreenpage.css">
+    <title>Ec-Clean Water System Corp.</title>
 </head>
 
 <body>
